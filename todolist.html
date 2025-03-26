@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript defer src ="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To Do List</title>
+    <style>
+        body {
+            position: relative;
+            top: 50px;
+        }
+
+        .box {
+            width: 700px;
+            height: 500px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 12px;
+        }
+
+        .inbox {
+            width: 700px;
+            height: 100px;
+        }
+        /*.checked {text-decoration: line-through;} 체크박스 누르면 줄쳐짐*/
+        
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>To Do List</h1>
+
+        <form class="inbox">
+            <fieldset>
+                날짜 : <input id="dateInput" type="date" name ="date" /><br><br>
+                할 일 : <input id="taskInput" type="text">
+                <input id="addButton" type="button" value="+">
+            </fieldset>
+        </form>
+
+        <br>
+        <div class="box">
+        </div><br>
+        <input type="button" value="수정" name="modify">
+        <input type="button" value="삭제" name="delete">
+
+    </center>
+    <script src="script.js"></script>
+</body>
+
+</html>
