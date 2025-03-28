@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="calendar.css">
     <script type = "text/javascript defer src ="calendar.js"></script>
+    
     <title>MARCH</title>
     <style>
         body{
@@ -123,7 +124,15 @@
         </tbody>
     </table>
 </div>
-    <script src="calendar.js"></script>
+    
 </center>
+<script src="calendar.js">
+    window.addEventListener('scroll', function() {
+      // 스크롤이 페이지 끝에 도달했는지 확인 (필요에 따라 조건 수정)
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        window.location.href = 'todolist.html'; // todolist 페이지로 이동
+      }
+    });
+    </script>
 </body>
 </html>

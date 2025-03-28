@@ -14,6 +14,8 @@ box.appendChild(listBox);
 const modifyButton = document.querySelector('input[name="modify"]'); 
 // 삭제 버튼
 const deleteButton = document.querySelector('input[name="delete"]');
+// 저장 버튼
+const saveButton = document.querySelector('input[name="save"]');
 
 let selectedListItem = null; // 선택된 할 일 항목
 
@@ -55,7 +57,7 @@ addButton.addEventListener('click', function() {
     taskInput.value = '';
   }
 });
-
+// 수정 시 
 modifyButton.addEventListener('click', () => {
   if (selectedListItem) {
     const label = selectedListItem.querySelector('label');
@@ -68,7 +70,7 @@ modifyButton.addEventListener('click', () => {
     alert('수정할 할 일을 선택하세요.');
   }
 });
-
+// 삭제 시
 deleteButton.addEventListener('click', () => {
   if (selectedListItem) {
     listBox.removeChild(selectedListItem); // 선택된 항목 삭제
