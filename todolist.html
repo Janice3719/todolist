@@ -32,7 +32,7 @@
         }
 
         .inbox {
-            width: 700px;
+            width: 705px;
             height: 100px; 
             
         }
@@ -62,7 +62,7 @@
          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       }
       .plusbutton{
-        width: 5%;
+        width: 8%;
         padding: 0.3rem;
         border : black;
         border-radius: 0.5rem;
@@ -84,6 +84,8 @@
         width: 40%;
         font-size: 1rem;
       }
+      
+      
     </style>
 </head>
 
@@ -93,16 +95,12 @@
 
         <form class="inbox">
             <fieldset>
-                날짜 : <input id="dateInput" type="date" name ="date" /><br><br>
-
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <label for="dateInput" style="margin-right: 5px;"></label>
-                    <input type="date" id="dateInput" name = "date" style="border: 1px solid #ccc; padding: 8px; border-radius: 4px; flex: 1;">
+                  <div style="display: flex; align-items: center; gap: 10px;width:200px">
+                    <input id="dateInput" type="date" name ="date" style="border: 1px solid #ccc; padding: 8px; border-radius: 4px; flex: 1;">
                   </div>
-
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <label for="todoInput" style="margin-right: 5px;"></label>
-                    <input type="text" id="todoInput" placeholder="할 일을 입력하세요" style="border: 1px solid #ccc; padding: 8px; border-radius: 4px; flex: 1;">
+                  <br>
+                <div style="display: flex; align-items: center; gap: 10px; width: 400px;">
+                    <input  type="text" id="todoInput" placeholder="할 일을 입력하세요" style="border: 1px solid #ccc; padding: 8px; border-radius: 4px; flex: 1;">
                     <input id="addButton" type="button" value="+" class="plusbutton">
                   </div>
                   
@@ -118,11 +116,7 @@
         <input type="button" value="저장" name="save" class="MSDbutton">
         <input type="button" value="삭제" name="delete" class="MSDbutton">
         
-      
-        <!--
-        <button class="login-button">수정</button>
-        <button class="login-button">저장</button>
-        <button class="login-button">삭제</button>-->
+       
         <div id="calendar"></div> </center>
     <script src="script.js"></script>
 </body>
