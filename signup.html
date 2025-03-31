@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        margin: 0;
+      }
+
+      .signup-container {
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
+
+      .signup-container:hover {
+          transform: scale(1.02);
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .logo {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .logo h1{
+        color: #000000;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .input-container {
+        margin-bottom: 1rem;
+      }
+
+      .input-container input {
+        border: 2px solid #e0e0e0;
+        border-radius: 0.375rem;
+        padding: 0.75rem;
+        width: 93%;
+        outline: none;
+        font-size: 1rem;
+        transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
+
+      .input-container input:focus {
+        border-color: #e2e3e2;
+        box-shadow: 0 0 0 3px rgba(73, 13, 83, 0.1);
+      }
+
+      .input-container input::placeholder {
+        color: #b0bec5;
+      }
+
+      .signup-button {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        background: linear-gradient(to right, #d0cdd1, #575757);
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .signup-button:hover {
+        background: linear-gradient(to right, #d0cdd1, #575757);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+      }
+      .signup-button:active{
+         transform: translateY(0);
+         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="logo">
+            <h1>TODOLIST</h1>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="username">
+        </div>
+        <div class="input-container">
+            <input type="password" placeholder="password">
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="email">
+        </div>
+        <a href = "march.html">
+        <button class="signup-button">Sign up</button></a>
+    </div>
+</body>
+</html>

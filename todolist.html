@@ -9,46 +9,121 @@
     <title>My To Do List</title>
     <style>
         body {
+            margin-left: 650px;
+            margin-top: 70px;
             position: relative;
             top: 50px;
-        }
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 700px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
 
         .box {
             width: 700px;
             height: 500px;
             border: 1px solid rgb(0, 0, 0);
             border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+
         }
 
         .inbox {
             width: 700px;
-            height: 100px;
+            height: 100px; 
+            
         }
-        /*.checked {text-decoration: line-through;} 체크박스 누르면 줄쳐짐*/
         
+        /*.checked {text-decoration: line-through;} 체크박스 누르면 줄쳐짐*/
+        .MSDbutton {
+        width: 10%;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        background: linear-gradient(to right, #e3e3e3, #acacac);
+        color: rgb(33, 33, 33);
+        font-weight: bold;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .MSDbutton:hover {
+        background: linear-gradient(to right, #e3e3e3,#acacac);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+      }
+      .MSDbutton:active{
+         transform: translateY(0);
+         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+      .plusbutton{
+        width: 5%;
+        padding: 0.3rem;
+        border : black;
+        border-radius: 0.5rem;
+        background: rgb(223, 223, 223);
+        color: rgb(33, 33, 33);
+        
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+        
+      }
+     
+
+      .input-container input {
+        border: 2px solid #bbbaba;
+        border-radius: 0.375rem;
+        padding: 0.75rem;
+        width: 40%;
+        font-size: 1rem;
+      }
     </style>
 </head>
 
 <body>
     <center>
-        <h1>To Do List</h1>
+        <h1>TODOLIST</h1>
 
         <form class="inbox">
             <fieldset>
                 날짜 : <input id="dateInput" type="date" name ="date" /><br><br>
-                할 일 : <input id="taskInput" type="text">
-                <input id="addButton" type="button" value="+">
+
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <label for="dateInput" style="margin-right: 5px;"></label>
+                    <input type="date" id="dateInput" name = "date" style="border: 1px solid #ccc; padding: 8px; border-radius: 4px; flex: 1;">
+                  </div>
+
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <label for="todoInput" style="margin-right: 5px;"></label>
+                    <input type="text" id="todoInput" placeholder="할 일을 입력하세요" style="border: 1px solid #ccc; padding: 8px; border-radius: 4px; flex: 1;">
+                    <input id="addButton" type="button" value="+" class="plusbutton">
+                  </div>
+                  
+                
             </fieldset>
         </form>
 
         <br>
         <div class="box">
         </div><br>
-        <input type="button" value="수정" name="modify">
-        <input type="button" value="저장" name="save">
-        <input type="button" value="삭제" name="delete">
-
-    </center>
+        
+        <input type="button" value="수정" name="modify" class="MSDbutton">
+        <input type="button" value="저장" name="save" class="MSDbutton">
+        <input type="button" value="삭제" name="delete" class="MSDbutton">
+        
+      
+        <!--
+        <button class="login-button">수정</button>
+        <button class="login-button">저장</button>
+        <button class="login-button">삭제</button>-->
+        <div id="calendar"></div> </center>
     <script src="script.js"></script>
 </body>
 
