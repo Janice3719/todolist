@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <script type = "text/javascript defer src ="login.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>log in</title>
@@ -11,6 +12,7 @@
         align-items: center;
         height: 90vh;
         margin: 0;
+        text-align :right;
       }
 
       .login-container {
@@ -84,8 +86,10 @@
          transform: translateY(0);
          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       }
-
-
+      a{
+        text-decoration: none;
+        color: #000000;
+      }
     </style>
 </head>
 <body>
@@ -100,6 +104,10 @@
             <input type="password" placeholder="password">
         </div>
         <button class="login-button">Log in</button>
+        <div>
+          <a href="signup.html" target="_blank" style="cursor: pointer; padding: 10px; display: inline-block;">SIGN UP</a>
+        </div>
     </div>
+    <script src="login.js"></script>
 </body>
 </html>

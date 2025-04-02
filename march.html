@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="calendar.css">
-    <script type = "text/javascript defer src ="calendar.js"></script>
-    
     <title>MARCH</title>
     <style>
         body{
@@ -44,46 +41,26 @@
             position: absolute;
             top: 1%;
         }
-        .image4 {
-            margin-left: 200px;
-            position: absolute;
-            top: 1%;
-        }.image5 {
-            margin-left: 208px;
-            position: absolute;
-            top: 15%;
-        }
-        /*.image3:hover {
-        background: linear-gradient(to right, #d0cdd1, #575757);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
-      }
-      .image3 :active{
-         transform: translateY(0);
-         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-      }
-      .image4:hover {
-        background: linear-gradient(to right, #d0cdd1, #575757);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
-      }
-      .image4 :active{
-         transform: translateY(0);
-         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-      }
-      .image5:hover {
-        background: linear-gradient(to right, #d0cdd1, #575757);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
-      }
-      .image5 :active{
-         transform: translateY(0);
-         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-      }*/
+       
+       
 
     </style>
 </head>
 <body>
+    <h1 id="welcomeMessage">Loading...</h1>
+
+    <script>
+        // URL에서 username 가져오기
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get("username");
+
+        // username이 있다면 화면에 표시
+        if (username) {
+            document.getElementById("welcomeMessage").textContent = `Welcome, ${username}!`;
+        } else {
+            document.getElementById("welcomeMessage").textContent = "No username provided.";
+        }
+    </script>
         <a href = "april.html" target="_blank" style="cursor:pointer">
         <img src = "right.png" width ="50" height ="50" class ="image1"></a>
     
@@ -92,10 +69,6 @@
         <a href = "todolist.html" target="_blank" style="cursor:pointer">
         <img src = "todolist.png" width ="150" height ="30" class = "image3"> </a>
     
-        <a href = "signup.html" target = "_blank" style="cursor:pointer">
-         <img src = "signup.png" width ="140" height ="38" class ="image4"></a>
-         <a href = "login.html" target = "_blank" style="cursor:pointer">
-        <img src = "login.png" width ="125" height ="30" class ="image5"></a>
          <center>
    <!--<h1>2025</h1>--> 
     <h1>MARCH</h1>
@@ -173,13 +146,6 @@
 </div>
     
 </center>
-<script src="calendar.js">
-    window.addEventListener('scroll', function() {
-      // 스크롤이 페이지 끝에 도달했는지 확인 (필요에 따라 조건 수정)
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        window.location.href = 'todolist.html'; // todolist 페이지로 이동
-      }
-    });
-    </script>
+
 </body>
 </html>

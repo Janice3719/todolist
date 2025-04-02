@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "calendar.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
     "url": "https://github.com/Janice3719/todolist/issues"
   },
   "homepage": "https://github.com/Janice3719/todolist#readme",
+  "keywords": [],
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {},
   "description": ""
 }
