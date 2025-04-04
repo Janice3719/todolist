@@ -7,7 +7,7 @@ app.use(express.static(__dirname));
 
 // 기본 경로에서 login.html 반환
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'login.html'));
+    res.sendFile(path.join(__dirname, 'signup.html'));
 });
 
 // 서버 실행
